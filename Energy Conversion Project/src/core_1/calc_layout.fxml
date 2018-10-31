@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core_1.cor1_calc_controller">
+   <center>
+      <ScrollPane maxWidth="1.7976931348623157E308" pannable="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <content>
+            <VBox alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" prefHeight="785.0" prefWidth="720.0" spacing="10.0" style="-fx-background-color: white;">
+               <children>
+                  <Group>
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../figures/figure%201.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="69.0" layoutY="155.0" prefWidth="20.0" style="-fx-background-color: blue;" />
+                        <Label layoutX="156.0" layoutY="67.0" prefWidth="20.0" style="-fx-background-color: green;" />
+                        <Label layoutX="-24.0" layoutY="67.0" prefWidth="20.0" style="-fx-background-color: black;" />
+                        <Label layoutX="69.0" layoutY="-18.0" prefWidth="20.0" style="-fx-background-color: red;" />
+                     </children>
+                  </Group>
+                  <Separator prefWidth="200.0" style="-fx-background-color: black;" />
+                  <HBox alignment="CENTER" spacing="20.0">
+                     <children>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="130.0" prefWidth="300.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="200.0" text="Relative Permeability:" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Permeability of free Space:" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Total Length:" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Core Depth:" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="253.0" layoutY="114.0" text="Electromotive Force:" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Number of Turns:" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Current:" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Flux:" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="130.0" prefWidth="150.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label fx:id="RelativePermeability_label" text="0.00" textFill="#83520d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="permeability_o_free_space_label" text="0.00" textFill="#83520d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="total_length_label" text="0.00" textFill="#83520d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="core_depth_label" text="0.00" textFill="#83520d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="emf_label" text="0.00" textFill="#83520d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="num_turns_label" text="0.00" textFill="#83520d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="current_label" text="0.00" textFill="#83520d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="flux_label" text="0.00" textFill="#83520d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="200.0" text="" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="26.0" prefWidth="200.0" text="" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="U1" prefHeight="26.0" prefWidth="200.0" text="units" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="U2" prefHeight="26.0" prefWidth="200.0" text="Units" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="26.0" prefWidth="200.0" text="A.t" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="26.0" prefWidth="200.0" text="Turns" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="166.0" prefHeight="26.0" prefWidth="200.0" text="A" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="26.0" prefWidth="200.0" text="Wb" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" style="-fx-background-color: black;" />
+                  <HBox alignment="CENTER" spacing="20.0">
+                     <children>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="130.0" prefWidth="300.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label text="Flux Density 1:" textFill="#0f3ce1">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Flux Density 2:">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Flux Density 3:" textFill="#dd262c">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Flux Density 4:" textFill="#228d10">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Total Flux Density:" textFill="#b516a0">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="130.0" prefWidth="150.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label fx:id="flux_den_1_label" text="0.00" textFill="#0f3ce1">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="flux_den_2_label" text="0.00">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="flux_den_3_label" text="0.00" textFill="#dd262c">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="flux_den_4_label" text="0.00" textFill="#228d10">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="flux_den_tot_label" text="0.00" textFill="#b516a0">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="200.0" text="T" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="26.0" prefWidth="200.0" text="T" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="26.0" prefWidth="200.0" text="T" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="26.0" prefWidth="200.0" text="T" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="26.0" prefWidth="200.0" text="T" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" style="-fx-background-color: black;" />
+                  <HBox alignment="CENTER" spacing="20.0">
+                     <children>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="130.0" prefWidth="300.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label text="Reluctance 1:" textFill="#0f3ce1">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Reluctance 2:">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Reluctance 3:" textFill="#dd262c">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Reluctance 4:" textFill="#228d10">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="TOTAL:" textFill="#b516a0">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="130.0" prefWidth="150.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label fx:id="reluctance_1_label" text="0.00" textFill="#0f3ce1">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="reluctance_2_label" text="0.00">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="reluctance_3_label" text="0.00" textFill="#dd262c">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="reluctance_4_label" text="0.00" textFill="#228d10">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="reluctance_tot_label" text="0.00" textFill="#b516a0">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="200.0" text="A.t/Wb" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="26.0" prefWidth="200.0" text="A.t/Wb" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="26.0" prefWidth="200.0" text="A.t/Wb" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="26.0" prefWidth="200.0" text="A.t/Wb" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="26.0" prefWidth="200.0" text="A.t/Wb" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" style="-fx-background-color: black;" />
+                  <HBox alignment="CENTER" spacing="20.0">
+                     <children>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="130.0" prefWidth="300.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label text="Area 1:" textFill="#0f3ce1">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Area 2:">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Area 3:" textFill="#dd262c">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Area 4:" textFill="#228d10">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="TOTAL:" textFill="#b516a0">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="130.0" prefWidth="150.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label fx:id="Area_1_label" text="0.00" textFill="#0f3ce1">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="Area_2_label" text="0.00">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="Area_3_label" text="0.00" textFill="#dd262c">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="Area_4_label" text="0.00" textFill="#228d10">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="Area_tot_label" text="0.00" textFill="#b516a0">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="U3" prefHeight="26.0" prefWidth="200.0" text="units^2" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="U4" prefHeight="26.0" prefWidth="200.0" text="units^2" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="U5" layoutX="10.0" layoutY="166.0" prefHeight="26.0" prefWidth="200.0" text="units^2" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="U6" prefHeight="26.0" prefWidth="200.0" text="units^2" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="U7" prefHeight="26.0" prefWidth="200.0" text="units^2" textFill="#820d0d">
+                                 <font>
+                                    <Font name="Bell MT" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content>
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor>
+      </ScrollPane>
+   </center>
+</BorderPane>
